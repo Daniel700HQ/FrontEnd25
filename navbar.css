@@ -1,0 +1,57 @@
+nav {
+    background-color: #b34b4b;
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > li {
+    background-color: darkblue;
+    margin-right: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: #6e5b5b;
+}
+
+/* Estilos del submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #a92222;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #63627b;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+}
