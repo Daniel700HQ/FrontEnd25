@@ -1,0 +1,16 @@
+:root {
+    --color-fondo: #121212;
+    --color-superficie: #1E1E1E;
+    --color-primario: #BB86FC;
+    --color-texto-principal: #FFFFFF;
+    --color-texto-secundario: #B3B3B3;
+    --borde-sutil: #2c2c2c;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+}
+/* Los estilos del navbar han sido movidos a NavbarComponent.css */
