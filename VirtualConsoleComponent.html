@@ -1,0 +1,27 @@
+<!-- VirtualConsoleComponent.html -->
+<link rel="stylesheet" href="VirtualConsoleComponent.css">
+
+<div class="console-wrapper">
+    <!-- El display completo de la consola, inicialmente visible -->
+    <div class="console-display" id="consoleDisplay">
+        <div class="console-header">
+            <span>Consola Virtual</span>
+            <button id="hideButton" class="header-button">✖</button> <!-- Botón para ocultar -->
+        </div>
+        <div class="console-body" id="consoleBody">
+            <textarea id="consoleOutput" class="console-output" readonly></textarea>
+            <div class="console-input-area">
+                <input type="text" id="consoleInput" class="console-input" placeholder="Escribe un comando y presiona Enter...">
+            </div>
+            <div class="console-controls">
+                <button id="clearButton">Limpiar Consola</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- El botón para mostrar la consola, inicialmente oculto -->
+    <button id="showButton" class="show-console-button" style="display: none;">Mostrar Consola</button>
+
+    <!-- iframe oculto para la ejecución del código JavaScript -->
+    <iframe id="consoleIframe" style="display: none;"></iframe>
+</div>

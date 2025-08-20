@@ -1,0 +1,154 @@
+/* VirtualConsoleComponent.css */
+
+/* El wrapper principal que contiene todo el componente, siempre fijo en la pantalla */
+.console-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* El contenedor de la consola completa cuando está visible */
+.console-display {
+    width: 80vw; /* Ancho inicial del 80% del ancho de la ventana */
+    height: 25vh; /* Alto inicial del 25% del alto de la ventana */
+
+    max-width: calc(100vw - 40px); /* Redimensionar hasta el ancho de la ventana */
+    min-width: 300px; /* Ancho mínimo */
+    min-height: 100px; /* Altura mínima */
+    /* resize: both; (Esta propiedad ahora se controla dinámicamente en JS) */
+    overflow: hidden; /* Oculta cualquier barra de desplazamiento en el contenedor principal */
+
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex; /* Asegura el layout flex para los hijos */
+    flex-direction: column;
+    background-color: var(--color-superficie, #1E1E1E);
+    border: 1px solid var(--borde-sutil, #2c2c2c);
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilos del encabezado */
+.console-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-texto-principal, #FFFFFF);
+    padding: 0.5rem 1rem;
+    cursor: default; /* El encabezado ya no alterna la visibilidad principal */
+    border-bottom: 1px solid var(--borde-sutil);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+/* Botón de la cabecera (cerrar) */
+.header-button {
+    background: none;
+    border: none;
+    color: var(--color-texto-principal, #FFFFFF);
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: transform 0.3s ease;
+    line-height: 1; /* Asegura que el texto "x" esté centrado verticalmente */
+}
+
+.header-button:hover {
+    color: var(--color-primario, #BB86FC);
+}
+
+/* Estilos del cuerpo (contenido) */
+.console-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+    opacity: 1;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--color-superficie, #1E1E1E);
+    min-height: 0;
+}
+
+/* Área de texto de salida de la consola */
+.console-output {
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #000;
+    color: var(--color-texto-principal, #FFFFFF);
+    border: 1px solid var(--borde-sutil, #333);
+}
+
+/* Área de entrada de la consola */
+.console-input-area {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.console-input {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    background-color: #282828;
+    color: var(--color-texto-principal, #FFFFFF);
+    border: 1px solid var(--borde-sutil, #444);
+    border-radius: 4px;
+    outline: none;
+}
+
+.console-input:focus {
+    border-color: var(--color-primario, #BB86FC);
+}
+
+/* Controles (botón de limpiar) */
+.console-controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.console-controls button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    background-color: var(--color-primario, #BB86FC);
+    color: var(--color-texto-principal, #FFFFFF);
+}
+
+.console-controls button:hover {
+    background-color: color-mix(in srgb, var(--color-primario, #BB86FC) 80%, black);
+}
+
+/* Estilos para el botón de "Mostrar Consola" cuando la consola está oculta */
+.show-console-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-primario, #BB86FC); /* Color primario */
+    color: var(--color-texto-principal, #FFFFFF);
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.show-console-button:hover {
+    background-color: color-mix(in srgb, var(--color-primario, #BB86FC) 80%, black);
+}

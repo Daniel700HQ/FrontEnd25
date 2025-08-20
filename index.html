@@ -9,9 +9,13 @@
 <body>
 
     <dark-navbar></dark-navbar>
+    <virtual-console></virtual-console> <!-- ¡Aquí está el nuevo componente! -->
 
     <!-- Nos aseguramos de llamar al script correcto -->
     <script src="NavbarComponentRender.js"></script>
+    <!-- Es CRUCIAL que VirtualConsoleComponentRender.js se cargue ANTES de pruebas.js -->
+    <script src="VirtualConsoleComponentRender.js"></script>
+    <script src="pruebas.js"></script>
 
 </body>
 </html>
