@@ -1,0 +1,19 @@
+variables
+
+
+var form antigua de declarar variables
+
+var variableAntigua = "contenido de la variable antiua";
+let : variable que se puede cambiar
+const no se pude
+
+
+let edad = 25;
+edad = 26; // esto cambia de forma exitossa la dad
+
+const nombre = diego
+si escribimos nombre = "dani" dara error
+
+console.log ("tu edad es ", edad);
+console.log("tu nombre es nombre", nombre);
+console.log("el contenido de la variable antigua es " , variableAntigua );
