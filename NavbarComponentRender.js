@@ -1,3 +1,5 @@
+// NavbarComponentRender.js
+
 class NavbarComponent extends HTMLElement {
     constructor() {
         super();
@@ -11,5 +13,6 @@ class NavbarComponent extends HTMLElement {
         this.shadowRoot.innerHTML = html;
     }
 }
+
 
 window.customElements.define('dark-navbar', NavbarComponent);
