@@ -1,3 +1,5 @@
+/* style.css */
+
 :root {
     --color-fondo: #121212;
     --color-superficie: #1E1E1E;
@@ -13,4 +15,5 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto-principal);
 }
+
 /* Los estilos del navbar han sido movidos a NavbarComponent.css */
