@@ -1,3 +1,4 @@
+/*NavbarComponent.css*/
 /* Estilos específicos del Navbar */
 
 /* Variables CSS (duplicadas para el Shadow DOM, si no se usan variables externas) */
@@ -42,4 +43,5 @@
 
 .navbar-link:hover {
     color: var(--color-primario);
+
 }
